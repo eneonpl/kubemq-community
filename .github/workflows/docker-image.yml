@@ -1,4 +1,4 @@
-name: Build kubemq-community image and push to pesacr.azurecr.io
+name: Build kubemq-community image and push to docker hub
 
 on:
   push:
