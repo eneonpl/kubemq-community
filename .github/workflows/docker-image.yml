@@ -19,4 +19,4 @@ jobs:
     - name: Build the image ${{ env.IMAGE_NAME }}
       run: docker build --build-arg GITHUB_RUN_NUMBER=${{github.run_number}} . --file Dockerfile --tag ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
     - name: Push the image ${{ env.IMAGE_NAME }} into registry ${{ secrets.REGISTRY }}
-      run: docker push ${{ secrets.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+      run: docker push ${{ secrets.REGISTRY_LOGIN }}/${{ env.IMAGE_NAME }}:latest
